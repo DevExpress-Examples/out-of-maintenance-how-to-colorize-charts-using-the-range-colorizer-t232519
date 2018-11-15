@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/RangeColorizerExample/Form1.cs) (VB: [Form1.vb](./VB/RangeColorizerExample/Form1.vb))
+* [Program.cs](./CS/RangeColorizerExample/Program.cs) (VB: [Program.vb](./VB/RangeColorizerExample/Program.vb))
+<!-- default file list end -->
 # How to colorize charts using the Range Colorizer 
 
 
