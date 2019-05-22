@@ -16,18 +16,18 @@ namespace RangeColorizerExample {
         private void Form1_Load(object sender, EventArgs e) {
             #region #BarSeries
             // Create and customize a bar series.
-            Series bubbleSeries = new Series() {
-                DataSource = LoadData(filepath),
-                Colorizer = CreateColorizer(),
+            Series barSeries = new Series() {
+                DataSource = LoadData(filepath),               
                 ArgumentDataMember = "Country",
                 ColorDataMember = "Hpi",
-                View = new SideBySideBarSeriesView()
+                View = new SideBySideBarSeriesView()                
             };
-            bubbleSeries.ValueDataMembers.AddRange(new string[] { "Product" });
+            barSeries.View.Colorizer = CreateColorizer();
+            barSeries.ValueDataMembers.AddRange(new string[] { "Product" });
             #endregion #BarSeries
 
             // Add the series to the ChartControl's Series collection.
-            chartControl1.Series.Add(bubbleSeries);
+            chartControl1.Series.Add(barSeries);
 
             // Show a title for the values axis.
             ((XYDiagram)chartControl1.Diagram).AxisY.Title.Text = "GDP per capita, $";
